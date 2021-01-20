@@ -1,9 +1,47 @@
-<div class="elements-view__ctrls">
-  <form ng-submit="setWidth()">
-    <label>Width: <input type="number" ng-model="model.width" min="100" max="600" step="1"></label>
-    <button type="submit">Set</button>
-  </form>
+<div class="elements-view__ctrls wrapper">
+    <form ng-submit="setWidth()">
+        <label>Width: <input type="number" ng-model="model.width" min="100" max="600" step="1"></label>
+        <button type="submit">Set</button>
+    </form>
 </div>
-<div>
-  Elements
+<div class="elements-view__ctrls">
+    <div class="wrapper">
+        <button class="btn">BUTTON</button>
+    </div>
+</div>
+<div class="elements-view__ctrls">
+    <div class="hover wrapper">
+        <p class="item-wrapper">
+            <span>item 1</span>
+            <span>item 1</span>
+            <span>item 1</span>
+            <span>item 1</span>
+        </p>
+    </div>
+</div>
+<div class="elements-view__ctrls">
+    <div class="hover wrapper">
+        <p class="item-wrapper">
+            <span>item 2</span>
+            <span>item 2</span>
+            <span>item 2</span>
+            <span>item 2</span>
+        </p>
+
+        <div class="checkbox-wrapper">
+            <label>
+                <input type="checkbox" ng-disabled="true">
+            </label>
+            <label>
+                <input type="checkbox" ng-disabled="true">
+            </label>
+        </div>
+    </div>
+</div>
+<div class="elements-view__ctrls">
+    <div class="hover wrapper">
+        <p class="item-wrapper">
+            <span>item 3</span>
+        </p>
+    </div>
 </div>

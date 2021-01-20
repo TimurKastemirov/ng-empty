@@ -4,7 +4,54 @@ elements-view {
   display: block;
 }
 
-.elements-view__ctrls {
+.wrapper {
   padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.elements-view__ctrls {
   border-bottom: 1px solid @c-gray;
+
+  .btn {
+    border: 2px solid black;
+    width: 100%;
+    border-radius: 5px;
+    height: 35px;
+  }
+
+  .btn:hover {
+    border-color: @c-gray;
+  }
+
+  .hover {
+    .item-wrapper {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      margin: 0;
+    }
+
+    .checkbox-wrapper {
+      display: none;
+      min-width: 55px;
+      justify-content: space-between;
+
+      & label {
+        width: 22px;
+        height: 22px;
+        background-color: @c-gray;
+        & input {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.hover:hover {
+  background-color: @c-gray-light;
+  .checkbox-wrapper {
+    display: flex;
+  }
 }
