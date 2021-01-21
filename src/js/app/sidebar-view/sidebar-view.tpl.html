@@ -1,1 +1,16 @@
-Sidebar
+<div ng-if="item">
+    Selected: {{item.title}}
+    <br>
+    <br>
+    Tags: <br>
+    <div class="tag" ng-repeat="tag in item.tags track by $index">
+        {{tag}}
+        <button ng-click="removeTag($index)">X</button>
+    </div>
+
+    <br>
+
+    New Tag: <br>
+    <input type="text" name="newTag" ng-model="newTag.name">
+    <button ng-click="addNewTag()">Add</button>
+</div>

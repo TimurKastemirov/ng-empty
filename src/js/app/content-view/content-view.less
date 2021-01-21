@@ -3,4 +3,20 @@
 content-view {
   display: block;
   border-left: 1px solid @c-gray;
+
+  .commands {
+    border-bottom: 1px solid @c-dark;
+  }
+
+  .list {
+
+    .item {
+      padding: 10px;
+      border-bottom: 1px solid @c-gray;
+    }
+
+    .selected {
+      background-color: @c-gray-light;
+    }
+  }
 }

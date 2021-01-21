@@ -1,3 +1,42 @@
-<summary-view></summary-view>
-Content {{data}}
-<button ng-click="method()">method</button>
+<summary-view item="lastItemByDate" tags="uniqueTags"></summary-view>
+
+<div class="commands">
+    Order:
+    <select name="order" ng-model="commands.order" ng-change="changeOrder()">
+        <option value="title">title</option>
+        <option value="date">date</option>
+    </select>
+
+    <br>
+
+    <label>
+        Only Date:
+        <input type="checkbox" name="onlyDate" ng-model="commands.onlyDate" ng-change="setDateFormat()">
+    </label>
+
+    <br>
+
+    Search:
+    <input type="text"
+           name="search"
+           ng-model="commands.search"
+           ng-keyup="searchByText()"
+    >
+</div>
+
+<div class="list">
+    <div
+            ng-repeat="item in dataList"
+            class="item"
+            ng-click="selectItem(item)"
+            ng-class="{selected: selectedItem === item}"
+    >
+        Title: {{item.title}} <br>
+        Date: {{item.date | date : dateFormat}}
+    </div>
+
+    New Title: <br>
+    <input type="text" name="addNewItem" ng-model="newItem.title">
+    <button ng-click="addNewItem()">Add</button>
+
+</div>
